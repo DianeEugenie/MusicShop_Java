@@ -47,7 +47,7 @@ public class BowTest {
         //Given we have a bow
         assertNotNull(bow);
         //WHEN
-        //THEN
+        //THEN bow should have horse hair
         assertEquals("horse hair", bow.getHairType());
     }
 }
