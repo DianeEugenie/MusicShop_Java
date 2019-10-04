@@ -92,13 +92,23 @@ public class ViolinTest {
     }
 
     @Test
-    public void canPlay(){
+    public void canPlayTheViolin(){
         //GIVEN we have a violin
         assertNotNull(violin);
         //WHEN we play the violin
         String played = violin.play("Vivaldi's Four Seasons");
         //THEN
         assertEquals("Playing the melodic Vivaldi's Four Seasons on the electric violin.", played);
+    }
+
+    @Test
+    public void canPlayTheCello(){
+        //GIVEN we have a cello
+        assertNotNull(cello);
+        //WHEN we play the cello
+        String played = cello.play("Vivaldi's Four Seasons");
+        //THEN
+        assertEquals("Playing the melodic Vivaldi's Four Seasons on the acoustic cello.", played);
     }
 
 
