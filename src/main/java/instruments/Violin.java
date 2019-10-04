@@ -34,6 +34,6 @@ public class Violin extends Instrument {
     }
 
     public String play(String string) {
-        return null;
+        return "Playing the melodic " + string + " on the " + getType() + " " + getKey() + ".";
     }
 }

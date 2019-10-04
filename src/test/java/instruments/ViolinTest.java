@@ -91,6 +91,16 @@ public class ViolinTest {
         assertEquals(4, violin.getNoOfStrings());
     }
 
+    @Test
+    public void canPlay(){
+        //GIVEN we have a violin
+        assertNotNull(violin);
+        //WHEN we play the violin
+        String played = violin.play("Vivaldi's Four Seasons");
+        //THEN
+        assertEquals("Playing the melodic Vivaldi's Four Seasons on the electric violin.", played);
+    }
+
 
 
 
