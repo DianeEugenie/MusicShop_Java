@@ -20,7 +20,7 @@ public class DemperTest {
         //GIVEN we have a demper
         assertNotNull(demper);
         //WHEN
-        //THEN demper should be for violin
+        //THEN demper should be for trombone
         assertEquals(ForInstrument.TROMBONE, demper.getForInstrument());
     }
 

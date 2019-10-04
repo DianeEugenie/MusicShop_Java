@@ -20,7 +20,7 @@ public class MouthpieceTest {
         //GIVEN we have a mouthpiece
         assertNotNull(mouthpiece);
         //WHEN
-        //THEN mouthpiece should be for violin
+        //THEN mouthpiece should be for trombone
         assertEquals(ForInstrument.TROMBONE, mouthpiece.getForInstrument());
     }
 
