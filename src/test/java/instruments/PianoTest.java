@@ -24,7 +24,7 @@ public class PianoTest {
                 Family.PERCUSSION,
                 1000.00,
                 1199.99,
-                "Upright piano");
+                "upright piano");
     }
 
     @Test
