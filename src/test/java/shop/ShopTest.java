@@ -1,7 +1,10 @@
 package shop;
 
 import instruments.Family;
+import instruments.Piano;
 import instruments.Saxophone;
+import music_paraphernalia.ForInstrument;
+import music_paraphernalia.SheetMusic;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,6 +15,8 @@ public class ShopTest {
 
     Shop shop;
     Saxophone altSaxophone;
+    SheetMusic sheetMusic;
+    Piano uprightPiano;
 
     @Before
     public void before(){
@@ -23,6 +28,16 @@ public class ShopTest {
                 129.99,
                 "alto",
                 2);
+        sheetMusic = new SheetMusic(ForInstrument.PIANO,
+                10.00,
+                15.99,
+                "A Night At The Opera", "Queen");
+        uprightPiano = new Piano("spruce",
+                "Disco party",
+                Family.PERCUSSION,
+                1000.00,
+                1199.99,
+                "upright piano");
     }
 
     @Test
@@ -68,5 +83,23 @@ public class ShopTest {
         shop.removeItem(altSaxophone);
         //ThEN stock size should be 0
         assertEquals(0, shop.getStockSize());
+    }
+
+    @Test
+    public void canCalculateTotalPotentialProfit(){
+        //GIVEN we have a shop
+        assertNotNull(shop);
+        //AND we have several items in the shop
+        assertNotNull(altSaxophone);
+        assertNotNull(sheetMusic);
+        assertNotNull(uprightPiano);
+        shop.addItem(altSaxophone);
+        shop.addItem(sheetMusic);
+        shop.addItem(uprightPiano);
+        //WHEN we calculate total potential profit
+        double totalProfit = shop.calculatePotentialProfit();
+        //THEN we should get 34.99 + 5.99 + 199.99 back
+        assertEquals(240.97, totalProfit, 0.01);
+
     }
 }

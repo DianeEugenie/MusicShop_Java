@@ -1,7 +1,6 @@
 package shop;
 
 import behaviours.ISell;
-import instruments.Saxophone;
 
 import java.util.ArrayList;
 
@@ -33,5 +32,17 @@ public class Shop {
 
     public void removeItem(ISell item) {
         this.stock.remove(item);
+    }
+
+
+    public double calculatePotentialProfit() {
+        double totalProfit = 0;
+
+        for (ISell item: this.stock) {
+            totalProfit += item.calculateMarkup();
+        }
+
+        return totalProfit;
+
     }
 }
