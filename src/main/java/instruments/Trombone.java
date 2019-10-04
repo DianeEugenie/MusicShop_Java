@@ -4,7 +4,7 @@ public class Trombone extends Instrument {
 
     private String key;
     private String type;
-    private String mouthPiece;
+    private String mouthpiece;
 
 
     public Trombone(String material,
@@ -14,11 +14,11 @@ public class Trombone extends Instrument {
                     double sellPrice,
                     String key,
                     String type,
-                    String mouthPiece) {
+                    String mouthpiece) {
         super(material, colour, family, boughtPrice, sellPrice);
         this.key = key;
         this.type = type;
-        this.mouthPiece = mouthPiece;
+        this.mouthpiece = mouthpiece;
     }
 
     public String getKey() {
@@ -29,8 +29,8 @@ public class Trombone extends Instrument {
         return type;
     }
 
-    public String getMouthPiece() {
-        return mouthPiece;
+    public String getMouthpiece() {
+        return mouthpiece;
     }
 
     public String play() {

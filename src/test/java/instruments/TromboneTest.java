@@ -86,7 +86,7 @@ public class TromboneTest {
         assertNotNull(trombone1);
         //WHEN
         //THEN
-        assertEquals("titanium", trombone1.getMouthPiece());
+        assertEquals("titanium", trombone1.getMouthpiece());
     }
 
     @Test
