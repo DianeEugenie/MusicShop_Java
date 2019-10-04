@@ -96,17 +96,17 @@ public class TromboneTest {
         //WHEN we play the slide trombone
         String played = trombone1.play("A Million Dreams from The Greatest Showman");
         //THEN
-        assertEquals("Filling the room with the dreamy tunes of A Million Dreams from The Greatest Showman with the tenor slide trombone using a titanium mouthpiece.", played);
+        assertEquals("Filling the room with the dreamy tunes of A Million Dreams from The Greatest Showman by playing the tenor slide trombone using a titanium mouthpiece.", played);
     }
 
     @Test
     public void canPlayTheValveTrombone(){
         //GIVEN we have a valve trombone
         assertNotNull(trombone2);
-        //WHEN we play he valve trombone
+        //WHEN we play the valve trombone
         String played = trombone2.play("A Million Dreams from The Greatest Showman");
         //THEN
-        assertEquals("Filling the room with the dreamy tunes of A Million Dreams from The Greatest Showman with the tenor valve trombone using a silver mouthpiece.", played);
+        assertEquals("Filling the room with the dreamy tunes of A Million Dreams from The Greatest Showman by playing the tenor valve trombone using a silver mouthpiece.", played);
     }
 
 

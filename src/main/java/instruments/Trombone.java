@@ -34,6 +34,6 @@ public class Trombone extends Instrument {
     }
 
     public String play(String string) {
-        return "Filling the room with the dreamy tunes of " + string + " with the " + getKey() + " " + getType() + " trombone using a " + getMouthPiece() + " mouthpiece.";
+        return "Filling the room with the dreamy tunes of " + string + " by playing the " + getKey() + " " + getType() + " trombone using a " + getMouthPiece() + " mouthpiece.";
     }
 }
