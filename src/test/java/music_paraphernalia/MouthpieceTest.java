@@ -29,8 +29,8 @@ public class MouthpieceTest {
         //GIVEN we have a mouthpiece
         assertNotNull(mouthpiece);
         //WHEN
-        //THEN mouthpiece should have bought price 20
-        assertEquals(20.00, mouthpiece.getBoughtPrice(), 0.0);
+        //THEN mouthpiece should have bought price 5
+        assertEquals(5.00, mouthpiece.getBoughtPrice(), 0.0);
     }
 
     @Test
@@ -38,8 +38,8 @@ public class MouthpieceTest {
         //GIVEN we have a mouthpiece
         assertNotNull(mouthpiece);
         //WHEN
-        //THEN mouthpiece should have sell price 25.99
-        assertEquals(25.99, mouthpiece.getSellPrice(), 0.0);
+        //THEN mouthpiece should have sell price 6.99
+        assertEquals(6.99, mouthpiece.getSellPrice(), 0.0);
     }
 
     @Test
