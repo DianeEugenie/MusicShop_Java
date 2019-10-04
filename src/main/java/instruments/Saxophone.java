@@ -25,7 +25,7 @@ public class Saxophone extends Instrument {
         return reedSize;
     }
 
-    public String play(String string) {
-        return "Jazzing out " + string + " on the " + getColour().toLowerCase() + " " + getKey() + " sax.";
+    public String play() {
+        return getKey() + " sax playing: truhh duh tuh duh truuhhh";
     }
 }

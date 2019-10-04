@@ -2,6 +2,6 @@ package behaviours;
 
 public interface IPlay {
 
-    String play(String string);
+    String play();
 
 }

@@ -4,6 +4,7 @@ public enum Family {
 
     BRASS,
     WOODWIND,
-    STRING
+    STRING,
+    PERCUSSION
 
 }

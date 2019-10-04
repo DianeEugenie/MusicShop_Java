@@ -13,8 +13,20 @@ public class SaxophoneTest {
 
     @Before
     public void before(){
-        altSaxophone = new Saxophone("brass", "Baby blue", Family.WOODWIND, 95.00, 129.99, "alto", 2);
-        baritoneSaxophone = new Saxophone("brass", "Pitch black", Family.WOODWIND, 125.00, 139.99, "baritone", 4.5);
+        altSaxophone = new Saxophone("brass",
+                "Baby blue",
+                Family.WOODWIND,
+                95.00,
+                129.99,
+                "alto",
+                2);
+        baritoneSaxophone = new Saxophone("brass",
+                "Pitch black",
+                Family.WOODWIND,
+                125.00,
+                139.99,
+                "baritone",
+                4.5);
     }
 
     @Test
@@ -85,9 +97,9 @@ public class SaxophoneTest {
         //GIVEN we have a alto saxophone
         assertNotNull(altSaxophone);
         //WHEN we play the alto saxophone
-        String played = altSaxophone.play("Careless Whisper by George Michael");
+        String played = altSaxophone.play();
         //THEN
-        assertEquals("Jazzing out Careless Whisper by George Michael on the baby blue alto sax.", played);
+        assertEquals("alto sax playing: truhh duh tuh duh truuhhh", played);
     }
 
     @Test
@@ -95,8 +107,8 @@ public class SaxophoneTest {
         //GIVEN we have a baritone saxophone
         assertNotNull(baritoneSaxophone);
         //WHEN we play the baritone saxophone
-        String played = baritoneSaxophone.play("Careless Whisper by George Michael");
+        String played = baritoneSaxophone.play();
         //THEN
-        assertEquals("Jazzing out Careless Whisper by George Michael on the pitch black baritone sax.", played);
+        assertEquals("baritone sax playing: truhh duh tuh duh truuhhh", played);
     }
 }

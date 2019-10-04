@@ -33,7 +33,7 @@ public class Violin extends Instrument {
         return noOfStrings;
     }
 
-    public String play(String string) {
-        return "Playing the melodic " + string + " on the " + getType() + " " + getKey() + ".";
+    public String play() {
+        return getType() + " " + getKey() + " playing: neew naw nooow naaaaw.";
     }
 }

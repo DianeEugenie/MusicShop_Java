@@ -38,6 +38,6 @@ public abstract class Instrument implements IPlay {
         return sellPrice;
     }
 
-    public abstract String play(String string);
+    public abstract String play();
 
 }

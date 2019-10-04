@@ -96,9 +96,9 @@ public class ViolinTest {
         //GIVEN we have a violin
         assertNotNull(violin);
         //WHEN we play the violin
-        String played = violin.play("Vivaldi's Four Seasons");
+        String played = violin.play();
         //THEN
-        assertEquals("Playing the melodic Vivaldi's Four Seasons on the electric violin.", played);
+        assertEquals("electric violin playing: neew naw nooow naaaaw.", played);
     }
 
     @Test
@@ -106,9 +106,9 @@ public class ViolinTest {
         //GIVEN we have a cello
         assertNotNull(cello);
         //WHEN we play the cello
-        String played = cello.play("Vivaldi's Four Seasons");
+        String played = cello.play();
         //THEN
-        assertEquals("Playing the melodic Vivaldi's Four Seasons on the acoustic cello.", played);
+        assertEquals("acoustic cello playing: neew naw nooow naaaaw.", played);
     }
 
 
