@@ -63,4 +63,14 @@ public class SheetMusicTest {
         assertEquals("Queen", sheetMusic.getArtist());
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        //GIVEN we have a sheetMusic
+        assertNotNull(sheetMusic);
+        //WHEN we calculate markup
+        double markup = sheetMusic.calculateMarkup();
+        //THEN should get 5.99 back
+        assertEquals(5.99, markup, 0.01);
+    }
+
 }

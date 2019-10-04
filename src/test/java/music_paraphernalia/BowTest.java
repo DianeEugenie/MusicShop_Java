@@ -50,4 +50,14 @@ public class BowTest {
         //THEN bow should have horse hair
         assertEquals("horse hair", bow.getHairType());
     }
+
+    @Test
+    public void canCalculateMarkup(){
+        //GIVEN we have a bow
+        assertNotNull(bow);
+        //WHEN we calculate markup
+        double markup = bow.calculateMarkup();
+        //THEN should get 4.99 back
+        assertEquals(4.99, markup, 0.01);
+    }
 }

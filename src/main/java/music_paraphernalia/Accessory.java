@@ -27,4 +27,8 @@ public abstract class Accessory implements ISell {
     public double getSellPrice() {
         return sellPrice;
     }
+
+    public double calculateMarkup() {
+        return getSellPrice() - getBoughtPrice();
+    }
 }

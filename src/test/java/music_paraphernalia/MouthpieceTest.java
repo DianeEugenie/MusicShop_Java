@@ -59,6 +59,16 @@ public class MouthpieceTest {
         //THEN mouthpiece should return material Silver
         assertEquals("Silver", mouthpiece.getMaterial());
     }
+
+    @Test
+    public void canCalculateMarkup(){
+        //GIVEN we have a mouthpiece
+        assertNotNull(mouthpiece);
+        //WHEN we calculate markup
+        double markup = mouthpiece.calculateMarkup();
+        //THEN should get 1.99 back
+        assertEquals(1.99, markup, 0.01);
+    }
     
 
 

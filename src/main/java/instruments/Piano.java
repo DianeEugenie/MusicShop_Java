@@ -1,6 +1,8 @@
 package instruments;
 
-public class Piano extends Instrument {
+import behaviours.ISell;
+
+public class Piano extends Instrument implements ISell {
 
     private String size;
 
@@ -15,5 +17,9 @@ public class Piano extends Instrument {
 
     public String play() {
         return getSize() + " playing: plink plonk plenk ploonk.";
+    }
+
+    public double calculateMarkup() {
+        return getSellPrice() - getBoughtPrice();
     }
 }

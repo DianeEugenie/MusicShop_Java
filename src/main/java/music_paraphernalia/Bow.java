@@ -12,4 +12,5 @@ public class Bow extends Accessory {
     public String getHairType() {
         return hairType;
     }
+
 }

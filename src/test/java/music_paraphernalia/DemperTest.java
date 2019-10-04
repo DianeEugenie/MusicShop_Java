@@ -50,4 +50,14 @@ public class DemperTest {
         //THEN demper should return shape extending tube
         assertEquals("Extending Tube", demper.getShape());
     }
+
+    @Test
+    public void canCalculateMarkup(){
+        //GIVEN we have a demper
+        assertNotNull(demper);
+        //WHEN we calculate markup
+        double markup = demper.calculateMarkup();
+        //THEN should get 5.99 back
+        assertEquals(5.99, markup, 0.01);
+    }
 }

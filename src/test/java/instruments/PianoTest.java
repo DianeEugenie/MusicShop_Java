@@ -101,6 +101,16 @@ public class PianoTest {
         assertEquals("upright piano playing: plink plonk plenk ploonk.", played);
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        //GIVEN we have a piano
+        assertNotNull(grandPiano);
+        //WHEN we calculate markup
+        double markup = grandPiano.calculateMarkup();
+        //THEN should get 399.99 back
+        assertEquals(399.99, markup, 0.01);
+    }
+
 
 
 
