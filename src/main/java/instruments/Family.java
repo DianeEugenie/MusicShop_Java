@@ -1,6 +1,6 @@
 package instruments;
 
-public enum FamilyType {
+public enum Family {
 
     BRASS,
     WOODWIND,
