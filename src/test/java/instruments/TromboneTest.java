@@ -1,5 +1,7 @@
 package instruments;
 
+import music_paraphernalia.ForInstrument;
+import music_paraphernalia.Mouthpiece;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,11 +12,15 @@ public class TromboneTest {
 
     Trombone trombone1;
     Trombone trombone2;
+    Mouthpiece mouthpiece1;
+    Mouthpiece mouthpiece2;
 
     @Before
     public void before(){
-        trombone1 = new Trombone("brass", "Kiwi green", Family.BRASS, 150.00, 169.99, "tenor", "slide", "titanium");
-        trombone2 = new Trombone("brass", "green", Family.BRASS, 60.00, 64.99, "tenor", "valve", "silver");
+        mouthpiece1 = new Mouthpiece(ForInstrument.TROMBONE, 5.00, 6.99, "4G Mega", "Titanium");
+        mouthpiece2 = new Mouthpiece(ForInstrument.TROMBONE, 5.00, 6.99, "4G Mega", "Silver");
+        trombone1 = new Trombone("brass", "Kiwi green", Family.BRASS, 150.00, 169.99, "tenor", "slide", mouthpiece1);
+        trombone2 = new Trombone("brass", "green", Family.BRASS, 60.00, 64.99, "tenor", "valve", mouthpiece2);
     }
 
     @Test
@@ -86,7 +92,7 @@ public class TromboneTest {
         assertNotNull(trombone1);
         //WHEN
         //THEN
-        assertEquals("titanium", trombone1.getMouthpiece());
+        assertEquals("Titanium", trombone1.getMouthpiece().getMaterial());
     }
 
     @Test

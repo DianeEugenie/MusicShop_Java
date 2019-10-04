@@ -1,12 +1,13 @@
 package instruments;
 
 import behaviours.ISell;
+import music_paraphernalia.Mouthpiece;
 
 public class Trombone extends Instrument implements ISell {
 
     private String key;
     private String type;
-    private String mouthpiece;
+    private Mouthpiece mouthpiece;
 
 
     public Trombone(String material,
@@ -16,7 +17,7 @@ public class Trombone extends Instrument implements ISell {
                     double sellPrice,
                     String key,
                     String type,
-                    String mouthpiece) {
+                    Mouthpiece mouthpiece) {
         super(material, colour, family, boughtPrice, sellPrice);
         this.key = key;
         this.type = type;
@@ -31,7 +32,7 @@ public class Trombone extends Instrument implements ISell {
         return type;
     }
 
-    public String getMouthpiece() {
+    public Mouthpiece getMouthpiece() {
         return mouthpiece;
     }
 
