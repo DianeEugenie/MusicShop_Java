@@ -111,4 +111,14 @@ public class SaxophoneTest {
         //THEN
         assertEquals("baritone sax playing: truhh duh tuh duh truuhhh", played);
     }
+
+    @Test
+    public void canCalculateMarkup(){
+        //GIVEN we have a saxophone
+        assertNotNull(altSaxophone);
+        //WHEN we calculate markup
+        double markup = altSaxophone.calculateMarkup();
+        //THEN should get 34.99 back
+        assertEquals(34.99, markup, 0.01);
+    }
 }

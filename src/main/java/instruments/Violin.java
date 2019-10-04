@@ -1,6 +1,8 @@
 package instruments;
 
-public class Violin extends Instrument {
+import behaviours.ISell;
+
+public class Violin extends Instrument implements ISell {
 
     private String key;
     private String type;
@@ -35,5 +37,9 @@ public class Violin extends Instrument {
 
     public String play() {
         return getType() + " " + getKey() + " playing: neew naw nooow naaaaw.";
+    }
+
+    public double calculateMarkup() {
+        return getSellPrice() - getBoughtPrice();
     }
 }

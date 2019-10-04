@@ -1,6 +1,8 @@
 package instruments;
 
-public class Trombone extends Instrument {
+import behaviours.ISell;
+
+public class Trombone extends Instrument implements ISell {
 
     private String key;
     private String type;
@@ -40,5 +42,9 @@ public class Trombone extends Instrument {
         else {
             return getType() + " trombone playing: bwoo bwaa bwaa bwaaaaaaaaah.";
         }
+    }
+
+    public double calculateMarkup() {
+        return getSellPrice() - getBoughtPrice();
     }
 }

@@ -111,6 +111,16 @@ public class ViolinTest {
         assertEquals("acoustic cello playing: neew naw nooow naaaaw.", played);
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        //GIVEN we have a cello
+        assertNotNull(cello);
+        //WHEN we calculate markup
+        double markup = cello.calculateMarkup();
+        //THEN should get 49.99 back
+        assertEquals(49.99, markup, 0.01);
+    }
+
 
 
 

@@ -1,6 +1,8 @@
 package instruments;
 
-public class Saxophone extends Instrument {
+import behaviours.ISell;
+
+public class Saxophone extends Instrument implements ISell {
 
     private String key;
     private double reedSize;
@@ -27,5 +29,9 @@ public class Saxophone extends Instrument {
 
     public String play() {
         return getKey() + " sax playing: truhh duh tuh duh truuhhh";
+    }
+
+    public double calculateMarkup() {
+        return getSellPrice() - getBoughtPrice();
     }
 }

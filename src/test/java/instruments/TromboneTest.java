@@ -109,5 +109,15 @@ public class TromboneTest {
         assertEquals("valve trombone playing: broo braa braaaah broo brooh.", played);
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        //GIVEN we have a trombone
+        assertNotNull(trombone1);
+        //WHEN we calculate markup
+        double markup = trombone1.calculateMarkup();
+        //THEN should get 19.99 back
+        assertEquals(19.99, markup, 0.01);
+    }
+
 
 }
