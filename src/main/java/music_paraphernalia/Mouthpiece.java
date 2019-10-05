@@ -22,4 +22,9 @@ public class Mouthpiece extends Accessory {
     public String getMaterial() {
         return material;
     }
+
+    public double calculateMarkup() {
+        return getSellPrice() - getBoughtPrice();
+    }
+
 }

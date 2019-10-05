@@ -3,6 +3,7 @@ package shop;
 import behaviours.ISell;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Shop {
 
@@ -45,4 +46,5 @@ public class Shop {
         return totalProfit;
 
     }
+
 }

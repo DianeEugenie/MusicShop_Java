@@ -28,7 +28,4 @@ public abstract class Accessory implements ISell {
         return sellPrice;
     }
 
-    public double calculateMarkup() {
-        return getSellPrice() - getBoughtPrice();
-    }
 }

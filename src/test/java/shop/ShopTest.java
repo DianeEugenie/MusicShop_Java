@@ -1,5 +1,6 @@
 package shop;
 
+import behaviours.ISell;
 import instruments.Family;
 import instruments.Piano;
 import instruments.Saxophone;
@@ -7,6 +8,8 @@ import music_paraphernalia.ForInstrument;
 import music_paraphernalia.SheetMusic;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -17,6 +20,8 @@ public class ShopTest {
     Saxophone altSaxophone;
     SheetMusic sheetMusic;
     Piano uprightPiano;
+    Saxophone baritoneSaxophone;
+    Saxophone sopranoSaxophone;
 
     @Before
     public void before(){
@@ -38,6 +43,20 @@ public class ShopTest {
                 1000.00,
                 1199.99,
                 "upright piano");
+        baritoneSaxophone = new Saxophone("brass",
+                "Pitch black",
+                Family.WOODWIND,
+                125.00,
+                139.99,
+                "baritone",
+                4.5);
+        sopranoSaxophone = new Saxophone("brass",
+                "Purple",
+                Family.WOODWIND,
+                140.00,
+                159.99,
+                "soprano",
+                4.5);
     }
 
     @Test
@@ -102,4 +121,5 @@ public class ShopTest {
         assertEquals(240.97, totalProfit, 0.01);
 
     }
+    
 }
